@@ -1,6 +1,7 @@
-# REST-API-posgres-on-docker
+# REST-API-posgres-on-docker 
 ### Description
-REST-API working with postgresql server, both running on two different docker containers, commuticate each other
+REST-API working with postgresql server, both running on two different docker containers, commuticate each other.
+Using linux OS-ubuntu 18.04 
 
 ## Prerequisites Installation:
     1. docker CE edition
