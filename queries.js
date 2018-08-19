@@ -5,6 +5,7 @@ var options = {
     promiseLib: promise
 }
 var pgp = require('pg-promise')(options);
+
 var connectString = 'postgres://dor:123@'+PG_DOCKER_IP+':5432/postgres';
 var db = pgp(connectString);
   
