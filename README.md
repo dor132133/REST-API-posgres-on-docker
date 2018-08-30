@@ -26,6 +26,11 @@ Using linux OS-ubuntu 18.04
                 a. find the sub-ip address of postgres container using following cmd:
                     $docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
                 b. change PG_DOCKER_IP value.
+              OR
+                a. $sudo docker network ls
+                    looking foe the one with "backend", copy it name
+                    $ sudo docker inspect <network-name>
+                b. change PG_DOCKER_IP value.
     Build/Create schema in DB:
         1. connect postgres server
             $docker exec -it <container-name> psql -U postgres
