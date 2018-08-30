@@ -21,16 +21,7 @@ Using linux OS-ubuntu 18.04
     Setting-up:
         1. Activate and run rest-api and postgres containers
             $docker-compose up
-        2. change PG_DOCKER_IP value locate in queries.js
-            Docker provide his own sub-ip address, in order to manage communicate with postgres DB, need to update PG_DOCKER_IP                   locate in queries.js:
-                a. find the sub-ip address of postgres container using following cmd:
-                    $docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
-                b. change PG_DOCKER_IP value.
-              OR
-                a. $sudo docker network ls
-                    looking foe the one with "backend", copy it name
-                    $ sudo docker inspect <network-name>
-                b. change PG_DOCKER_IP value.
+            
     Build/Create schema in DB:
         1. connect postgres server
             $docker exec -it <container-name> psql -U postgres
