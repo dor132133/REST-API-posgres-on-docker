@@ -1,4 +1,3 @@
-const PG_DOCKER_IP = '172.18.0.2';
 
 var promise = require('bluebird');
 var options = {
@@ -6,7 +5,8 @@ var options = {
 }
 var pgp = require('pg-promise')(options);
 
-var connectString = 'postgres://dor:123@'+PG_DOCKER_IP+':5432/postgres';
+
+var connectString = 'postgres://dor:123@postgres:5432/postgres';//changed and set postgres container-name: postgres
 var db = pgp(connectString);
   
   //get all name's persons by certain age
